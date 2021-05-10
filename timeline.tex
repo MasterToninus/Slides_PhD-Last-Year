@@ -1,0 +1,61 @@
+\documentclass[border=10pt]{standalone}
+
+\providecommand{\datapath}{.}
+
+\usepackage{tikz}
+\usetikzlibrary{timeline}
+\usetikzlibrary{decorations.pathreplacing}
+
+\begin{document}
+
+\begin{tikzpicture}[timespan={},timeline width=25]
+
+\timeline[custom interval=true]{Sep, Oct, Nov, Dec,
+  Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct}
+
+% put here the phases
+\begin{phases}
+\initialphase{involvement degree=1.75cm,phase color=white}
+\tikzset{phase appearance/.append style={
+  rectangle, 
+  minimum width=\involvdegree,
+  minimum height=3cm}
+}
+\phase{between month=2 and 4 in 0.5,phase color=green!80!black,involvement degree=8cm}
+\phase{between month=7 and 9 in 0.5,phase color=orange!80!black,involvement degree=12cm}
+\phase{between month=12 and 13 in 0.5,phase color=red!80!black,involvement degree=3cm}
+\phase{between month=14 and 14 in 0.5,phase color=purple!90,involvement degree=2cm}
+\end{phases}
+
+  \node [xshift=0.6cm,yshift=2cm,anchor=east,
+         font=\Large\bfseries] at (phase-0.180)
+         {Deadlines};
+  %\node [xshift=-0.6cm,yshift=-1cm,anchor=east,
+         font=\Large\bfseries] at (phase-0.180)
+         {Plan};
+
+% put here the milestones
+
+  \addmilestone{at=phase-2.0,direction=90:3.5cm,
+    text={Manuscript Upload}}
+  \addmilestone{at=phase-3.0,direction=90:2.75cm,
+    text={Private defense}}
+  \addmilestone{at=phase-4.0,direction=90:2cm,
+    text={Public defense}}
+    
+%   \addmilestone{at=phase-1.230,direction=0:1cm,
+%     text={Finalizing join work w/ Zambon}, text options={below}}
+%   \addmilestone{at=phase-2.230,direction=0:1cm,
+%     text={Thesis writing}, text options={below}}
+%   \addmilestone{at=phase-3.250,direction=0:1cm,
+%     text={Thesis review}, text options={below}}
+
+    \draw [decorate, blue, decoration = {brace, amplitude = 10pt, mirror, raise = 4pt}]
+	([yshift = -3cm]phase-1.160) -- ([yshift =-3cm]phase-1.30)
+    node [black, midway, yshift = -0.75cm, align = center] {2019};
+    \draw [decorate, blue, decoration = {brace, amplitude = 10pt, mirror, raise = 4pt}]
+    ([yshift = -3cm]phase-1.30) -- ([yshift =-3cm]phase-4.60)
+    node [black, midway, yshift = -0.75cm, align = center] {2020};
+\end{tikzpicture}
+
+\end{document}

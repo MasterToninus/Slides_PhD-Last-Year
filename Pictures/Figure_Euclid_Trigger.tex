@@ -1,0 +1,18 @@
+%+------------------------------------------------------------------------+
+%| Diagram: How to trigger the HCMM costruction in R3
+%| Author: Antonio miti
+%+------------------------------------------------------------------------+
+
+\documentclass[border=10pt, tikz]{standalone}
+\usepackage{tikz-cd}
+\usepackage{mathtools}
+\usepackage{amsfonts}
+
+\begin{document}
+\begin{tikzcd}[column sep=large]
+	&	& \Omega^3(M) \ar[ddd,leftrightarrow,green!60!black,bend left=60,"\ast"]\\
+	& \mathfrak{X}(M) \ar[r,red,"\alpha"] \ar[dr,blue,"\flat",shift left=1ex]\ar[dr,blue,leftarrow,"\sharp"',shift right=1ex]& \Omega^2(M) \ar[u,"d"']  \ar[d,leftrightarrow,green!60!black,bend left=60,"\ast"] \\
+	\mathfrak{g} \ar[ru,hookrightarrow,"V_{\cdot}"] \ar[rr,purple,"f_1"]& & \Omega^1_{(ham)}(M) \ar[u,"d"'] \\
+	\mathfrak{g} \wedge \mathfrak{g}  \ar[u,"\partial"]\ar[rr,purple,"f_2"]& & \Omega^0(M) \ar[u,"d"']
+\end{tikzcd}
+\end{document}

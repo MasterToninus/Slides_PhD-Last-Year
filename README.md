@@ -1,25 +1,6 @@
-# Slides_Template
-Template for technical slides in Latex.
+# Second PhD Report
+(36 months presentation) :moyai:
 
-Style files are in a neverending "work in progress" status.
+https://set.kuleuven.be/phd/sap/second
 
-
-
-
-
-
---------------------------------------------
-
-# Event Title
-Slides for a contributed talk at the [13th International Young Researchers Workshop on Geometry, Mechanics and Control](http://www.uc.pt/en/congressos/13yrw).
-
-
-Place:
-Date:
-
-Title:
-
-
-Contents:
-Lenght:
-
+https://set.kuleuven.be/phd/sap/dualjoint/oral
